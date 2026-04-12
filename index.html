@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PlurVA-LLM — Pluralistic Value Alignment of LLMs · AACL 2026 Workshop</title>
+    <meta
+      name="description"
+      content="PlurVA-LLM — The First Workshop on Pluralistic Value Alignment of LLMs at AACL-IJCNLP 2026. Pluralistic alignment, shared task on three benchmarks, Hengqin, hybrid."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#">PlurVA-LLM <span class="logo-w">· AACL 2026</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#cfp">CFP</a>
+          <a href="#shared-task">Shared Task</a>
+          <a href="#themes">Themes</a>
+          <a href="#participate">Participate</a>
+          <a href="#program">Program</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#organizers">Organizers</a>
+          <a href="#venue">Venue</a>
+          <a class="nav-cta" href="#contact">Contact</a>
+        </nav>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-panel">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div id="nav-panel" class="nav-panel" hidden>
+        <a href="#about">About</a>
+        <a href="#cfp">CFP</a>
+        <a href="#shared-task">Shared Task</a>
+        <a href="#themes">Themes</a>
+        <a href="#participate">Participate</a>
+        <a href="#program">Program</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#venue">Venue</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">AACL-IJCNLP 2026 · The First Workshop on Pluralistic Value Alignment of LLMs</p>
+          <h1>PlurVA-LLM</h1>
+          <p class="hero-subtitle">Pluralistic Value Alignment of Large Language Models</p>
+          <p class="hero-tagline">Multiple Values. Multiple Languages. Unified Alignment.</p>
+          <p class="hero-lead">
+            Large language models are increasingly shaping how people access information, make decisions, and interact with
+            AI in everyday life. Much existing alignment work still emphasizes broad safety objectives or a
+            <strong>single value framework</strong>—which may not fully capture the diversity, contextuality, and conflicts
+            of real-world values. <strong>PlurVA-LLM</strong> asks how we can build models that
+            <strong>recognize, reason about, and respond to</strong> pluralistic values across individuals, communities,
+            and contexts—bringing together NLP, AI alignment, social science, philosophy, and related fields.
+          </p>
+          <ul class="hero-meta">
+            <li><strong>Venue</strong> Hengqin, China (with AACL 2026)</li>
+            <li><strong>Workshop day</strong> 10 Nov 2026 <span class="tag-draft">(draft)</span></li>
+            <li><strong>Format</strong> Hybrid · 1-day</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#cfp">Call for Papers</a>
+            <a class="btn btn-secondary" href="#shared-task">Shared Task</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
+          </div>
+          <p class="hero-footnote">
+            Invited talks · panel · posters · shared task session · ~80–120 in-person + remote attendees (proposal estimate)
+          </p>
+        </div>
+      </section>
+
+      <section id="about" class="section section-alt">
+        <div class="wrap">
+          <h2>About the workshop</h2>
+          <p class="section-intro">
+            Welcome to <strong>The First Workshop on Pluralistic Value Alignment of LLMs (PlurVA-LLM)</strong>. Large
+            language models (LLMs) are increasingly shaping how people access information, make decisions, and interact
+            with AI in everyday life. As these systems become more powerful and widely deployed, ensuring that they align
+            with human values has become an important challenge. However, most existing research on LLM alignment has
+            focused either on broad safety objectives or on alignment to a single value framework. Such approaches may not
+            fully capture the diversity, contextuality, and potential conflicts that characterize real-world human values.
+          </p>
+          <p class="section-intro">
+            <strong>PlurVA-LLM</strong> focuses on the challenge of <strong>pluralistic value alignment</strong>: how to
+            build LLMs that can recognize, reason about, and respond to diverse values across individuals, communities, and
+            contexts. The workshop aims to provide a venue for discussing the conceptual foundations, technical methods, and
+            evaluation approaches needed to better understand this problem. By bringing together researchers from NLP, AI
+            alignment, social science, philosophy, and related fields, PlurVA-LLM seeks to encourage interdisciplinary
+            exchange on the role of pluralistic values in the development and deployment of LLMs.
+          </p>
+          <div class="cards-3">
+            <article class="card">
+              <h3>Theory &amp; taxonomies</h3>
+              <p>
+                How should pluralistic values be defined, structured, and represented in models—especially when
+                taxonomies differ across cultures?
+              </p>
+            </article>
+            <article class="card">
+              <h3>Methods</h3>
+              <p>
+                How can alignment span pre-training, fine-tuning, preference learning, and inference while preserving
+                nuance, diversity, and user or community control?
+              </p>
+            </article>
+            <article class="card">
+              <h3>Evaluation &amp; impact</h3>
+              <p>
+                How do we test robustness and interpretability of aligned behavior in realistic, multilingual, and
+                culturally grounded settings—and assess broader social impact?
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="cfp" class="section">
+        <div class="wrap">
+          <h2>Call for papers</h2>
+          <p class="section-lead">
+            <strong>The First Workshop on Pluralistic Value Alignment of LLMs (PlurVA-LLM)</strong> aims to provide a
+            dedicated venue for research on this emerging topic. The workshop brings together researchers from NLP, ML, AI
+            safety, social science, philosophy, and related fields to discuss the foundations, methods, evaluation, and
+            applications of pluralistic value alignment in large language models.
+          </p>
+          <p class="section-lead tight">
+            We welcome both <strong>archival</strong> and <strong>non-archival</strong> submissions through
+            <strong>direct submission</strong> and <strong>ARR commitment</strong> tracks. Submissions may include technical
+            papers, <strong>position papers</strong>, and interdisciplinary work relevant to pluralistic value alignment.
+          </p>
+
+          <h3 class="subsection-title">Topics of interest</h3>
+          <p class="fine-print tight-before-list">We welcome submissions on topics including, but not limited to:</p>
+          <ul class="cfp-topics">
+            <li>Theoretical foundations and formalizations of pluralistic value alignment</li>
+            <li>Alignment methods for pluralistic values in LLMs</li>
+            <li>Benchmarks and evaluation protocols for pluralistic value alignment</li>
+            <li>Human-AI collaboration for constructing and curating value-sensitive datasets</li>
+            <li>Interpretability and analysis of value alignment in LLMs</li>
+            <li>Pluralistic value alignment in downstream applications and real-world deployment</li>
+            <li>Multilingual, multicultural, and low-resource perspectives on value alignment</li>
+            <li>Pluralistic value alignment in multimodal models and systems</li>
+          </ul>
+
+          <h3 class="subsection-title">Direct submission instructions</h3>
+          <p class="section-lead tight">
+            We invite authors to submit <strong>anonymized</strong> <strong>short papers</strong> (up to <strong>4 pages</strong>
+            of main content) or <strong>long papers</strong> (up to <strong>8 pages</strong> of main content), plus
+            <strong>unlimited</strong> pages of references and appendices. Submissions must follow the
+            <strong>ACL paper submission requirements</strong> and must be made through the <strong>OpenReview</strong>
+            submission portal once it is available.
+          </p>
+
+          <h3 class="subsection-title">Submission links</h3>
+          <p class="section-lead tight">
+            Submissions will be accepted via <strong>ACL Rolling Review (ARR)</strong> or directly through
+            <strong>OpenReview</strong>. Official OpenReview portal links will be <strong>posted on this site</strong> once they are live.
+          </p>
+
+          <h3 class="subsection-title">Important dates <span class="tag-draft">(draft)</span></h3>
+          <p class="fine-print tight-before-list">
+            All deadlines are <strong>11:59 p.m. UTC−12</strong> (“<strong>Anywhere on Earth</strong>”).
+          </p>
+          <div class="table-wrap">
+            <table class="dates-table">
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Date (2026)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Direct submission deadline (archival &amp; non-archival)</td>
+                  <td>15 Aug</td>
+                </tr>
+                <tr>
+                  <td>Peer review</td>
+                  <td>20 Aug – 10 Sep</td>
+                </tr>
+                <tr>
+                  <td>Notification (direct submission)</td>
+                  <td>15 Sep</td>
+                </tr>
+                <tr>
+                  <td>Last ARR cycle (for commitment)</td>
+                  <td>Aug 2026</td>
+                </tr>
+                <tr>
+                  <td>ARR commitment deadline (archival &amp; non-archival)</td>
+                  <td>15 Oct</td>
+                </tr>
+                <tr>
+                  <td>Notification (ARR commitment)</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>Already accepted / published (non-archival)</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>Camera-ready submission</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>Workshop</td>
+                  <td>10 Nov</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fine-print">
+            Dates follow the workshop CFP; any change will be announced together with AACL-IJCNLP 2026 workshop policies.
+          </p>
+        </div>
+      </section>
+
+      <section id="shared-task" class="section section-alt">
+        <div class="wrap">
+          <h2>Benchmark suite &amp; shared task</h2>
+          <p class="section-lead">
+            The shared task evaluates LLMs’
+            <strong>value alignment</strong> and <strong>normative reasoning</strong> across <strong>adversarial</strong>,
+            <strong>daily</strong>, and <strong>principle-driven</strong> settings. It is organized around
+            <strong>three benchmarks</strong> in <strong>Indonesian</strong>, <strong>Sri Lankan (English + Sinhala)</strong>,
+            and <strong>Chinese</strong> (the Chinese track may use <strong>attack-style</strong> or <strong>scenario-style</strong>
+            setups comparable to the other two). The competition <strong>platform</strong>, full timeline, and registration will be announced later.
+          </p>
+          <ul class="task-infra">
+            <li><strong>Evaluation protocol</strong> — a dedicated scoring framework for the task.</li>
+            <li><strong>Baselines</strong> — reference implementations or scores for comparison.</li>
+            <li><strong>Evaluation code</strong> — release format to be confirmed (the organizing draft discusses whether all code must be public).</li>
+          </ul>
+          <p class="section-lead tight">
+            Dataset statistics below come from benchmark papers and proposals; <strong>final rules may differ</strong> from what is on this page.
+          </p>
+
+          <div class="bench-grid">
+            <article class="bench">
+              <h3>D2VBench</h3>
+              <p><strong>Chinese · scenario-class everyday dilemmas</strong></p>
+              <p>
+                Built on a four-layer hierarchical value system (Livelihood, Social Order, Civilization) with
+                <strong>158</strong> fine-grained leaf concepts and on the order of <strong>~10k</strong> instances. Scenarios
+                are constructed through a four-stage pipeline (concept inventory → generation → quality control → reference
+                &amp; judge calibration), with <strong>Align-Score</strong>, five-dimensional rationale quality, a structured
+                reason bank, and alignment metrics against human and referee models—suited for normative reasoning beyond
+                single-label classification. A system-level proposal also targets on the order of <strong>~20k</strong>
+                scenario samples with free-form responses vs. human-curated references.
+              </p>
+            </article>
+            <article class="bench">
+              <h3>Indonesian · Pancasila-Dilemmas</h3>
+              <p><strong>Indonesia · multiple-choice value dilemmas</strong></p>
+              <p>
+                <strong>1,834</strong> four-option items grounded in the <strong>Pancasila</strong> five principles,
+                sourced from <em>Kompas</em> headlines with crowd and expert validation. Evaluation can report accuracy and
+                distributional agreement (e.g. JSD / TVD), including majoritarian vs. “any-agreement” style metrics against
+                human majorities or full distributions.
+              </p>
+            </article>
+            <article class="bench">
+              <h3>LKvaluesBench (Sri Lanka)</h3>
+              <p><strong>Sri Lanka · bilingual judgment alignment</strong></p>
+              <p>
+                <strong>2,000</strong> instances in <strong>English</strong> and <strong>Sinhala</strong> (paired translations)
+                over <strong>40</strong> survey-derived societal values. Labels indicate which language carries the judgment
+                (A / B / BOTH / neither). Reports model–human alignment and cross-lingual consistency—testing whether
+                “alignment” transfers across languages within one cultural context.
+              </p>
+            </article>
+          </div>
+
+          <p class="fine-print">
+            Detailed task description, data specifications, baselines, and leaderboards will be released with the official
+            shared-task announcement. Participation is expected from on the order of <strong>10–20 teams</strong> (proposal
+            estimate), with results presented in a dedicated session.
+          </p>
+          <div class="inline-actions">
+            <a class="btn btn-secondary" href="#contact">Task contact</a>
+            <a class="btn btn-ghost" href="#participate">Participate</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="themes" class="section">
+        <div class="wrap">
+          <h2>Research themes</h2>
+          <p class="section-lead">
+            The topic list under <a href="#cfp">Call for papers</a> is authoritative. The clusters below are an optional
+            grouping for navigation.
+          </p>
+          <div class="theme-columns">
+            <div>
+              <h3>Theory &amp; representation</h3>
+              <ul class="theme-list">
+                <li>Value frameworks and taxonomies</li>
+                <li>Cross-cultural value representation</li>
+                <li>Normative reasoning in LLMs</li>
+                <li>Value conflict and trade-off modeling</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Methods</h3>
+              <ul class="theme-list">
+                <li>Pre-training and mid-training alignment signals</li>
+                <li>Fine-tuning, preference learning, RLHF &amp; alternatives</li>
+                <li>Inference-time control and steering</li>
+                <li>Human–AI collaborative data creation</li>
+                <li>Multimodal alignment</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Evaluation &amp; applications</h3>
+              <ul class="theme-list">
+                <li>Alignment benchmarks and leaderboards</li>
+                <li>Interpretability and transparency</li>
+                <li>Low-resource and regional languages</li>
+                <li>Downstream applications and deployment</li>
+                <li>Social impact and pluralistic fairness</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="participate" class="section section-alt">
+        <div class="wrap">
+          <h2>Three ways to participate</h2>
+          <div class="participate-grid">
+            <article class="part-card">
+              <h3>Archival papers</h3>
+              <p>
+                Long and short papers (see page limits in <a href="#cfp">Call for papers</a>) for publication in the ACL
+                Anthology, including technical and position papers where appropriate, subject to acceptance and camera-ready requirements.
+              </p>
+            </article>
+            <article class="part-card">
+              <h3>Non-archival papers</h3>
+              <p>
+                For interdisciplinary participation, work in neighboring fields, or results already published or under
+                review elsewhere where allowed—supporting dialogue without duplicating archival constraints.
+              </p>
+            </article>
+            <article class="part-card">
+              <h3>Shared-task system reports</h3>
+              <p>
+                Papers describing systems, analyses, and error studies on the pluralistic value benchmarks; may overlap
+                with teams registering for the shared task leaderboard.
+              </p>
+            </article>
+          </div>
+          <p class="fine-print">
+            The program is planned as a <strong>one-day</strong> workshop with oral presentations, posters, a
+            <strong>panel</strong>, <strong>invited talks</strong>, and a <strong>dedicated shared-task session</strong>.
+            We anticipate roughly <strong>30–50</strong> paper submissions plus <strong>10–20</strong> shared-task team
+            reports (non-binding estimates from the workshop proposal).
+          </p>
+        </div>
+      </section>
+
+      <section id="program" class="section">
+        <div class="wrap">
+          <h2>Program highlights</h2>
+          <ul class="highlights">
+            <li>
+              <strong>Invited talks</strong> Perspectives spanning multilingual NLP, value-centered AI, normative theory,
+              and pluralistic evaluation (speakers to be confirmed; see below for a recommended slate from the organizing
+              committee).
+            </li>
+            <li>
+              <strong>Panel discussion</strong> Cross-disciplinary conversation on culture, pluralism, deployment, and
+              responsibility—aligned with the workshop’s diversity goals.
+            </li>
+            <li><strong>Poster session</strong> New datasets, methods, evaluations, and applications.</li>
+            <li>
+              <strong>Shared task session</strong> System reports, benchmark results, and discussion of multilingual
+              value alignment.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="speakers" class="section section-alt">
+        <div class="wrap">
+          <h2>Invited speakers</h2>
+          <p class="section-lead">
+            Invited speakers are <strong>to be confirmed</strong>.
+          </p>
+        </div>
+      </section>
+
+      <section id="organizers" class="section">
+        <div class="wrap">
+          <h2>Organizers</h2>
+          <div class="organizer-grid">
+            <article class="organizer-card">
+              <div class="organizer-photo">
+                <img
+                  src="images/organizers/deyi-xiong.jpeg"
+                  alt="Portrait of Deyi Xiong"
+                  width="280"
+                  height="280"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Deyi Xiong</h3>
+              <p class="organizer-role">Tianjin University</p>
+            </article>
+            <article class="organizer-card">
+              <div class="organizer-photo organizer-photo--nudge-right">
+                <img
+                  src="images/organizers/antonio-branco.jpeg"
+                  alt="Portrait of António Branco"
+                  width="280"
+                  height="280"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>António Branco</h3>
+              <p class="organizer-role">University of Lisbon</p>
+            </article>
+            <article class="organizer-card">
+              <div class="organizer-photo">
+                <img
+                  src="images/organizers/hongming-zhang.jpeg"
+                  alt="Portrait of Hongming Zhang"
+                  width="280"
+                  height="280"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Hongming Zhang</h3>
+              <p class="organizer-role">Macau University of Science and Technology</p>
+            </article>
+            <article class="organizer-card">
+              <div class="organizer-photo">
+                <img
+                  src="images/organizers/yue-dong.jpeg"
+                  alt="Portrait of Yue Dong"
+                  width="280"
+                  height="280"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Yue Dong</h3>
+              <p class="organizer-role">University of California, Riverside</p>
+            </article>
+            <article class="organizer-card">
+              <div class="organizer-photo organizer-photo--nudge-down">
+                <img
+                  src="images/organizers/benyou-wang.jpeg"
+                  alt="Portrait of Benyou Wang"
+                  width="280"
+                  height="280"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Benyou Wang</h3>
+              <p class="organizer-role">The Chinese University of Hong Kong, Shenzhen (CUHKSZ)</p>
+            </article>
+            <article class="organizer-card">
+              <div class="organizer-photo">
+                <img
+                  src="images/organizers/wenxuan-zhang.jpeg"
+                  alt="Portrait of Wenxuan Zhang"
+                  width="280"
+                  height="280"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Wenxuan Zhang</h3>
+              <p class="organizer-role">Singapore University of Technology and Design (SUTD)</p>
+            </article>
+            <article class="organizer-card">
+              <div class="organizer-photo organizer-photo--nudge-down">
+                <img
+                  src="images/organizers/li-zhou.jpeg"
+                  alt="Portrait of Li Zhou"
+                  width="280"
+                  height="280"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Li Zhou</h3>
+              <p class="organizer-role">The Chinese University of Hong Kong, Shenzhen (CUHKSZ)</p>
+            </article>
+          </div>
+          <p class="fine-print">
+            Program committee and sponsorship acknowledgements will be listed when finalized. The workshop is supported by an
+            international joint project on pluralistic value alignment and collaborating partners.
+          </p>
+        </div>
+      </section>
+
+      <section id="community" class="section section-alt">
+        <div class="wrap">
+          <h2>Diversity &amp; inclusion</h2>
+          <p class="section-lead">
+            Geo-cultural representation is central to pluralistic alignment. Planned initiatives include:
+          </p>
+          <ul class="diversity-list">
+            <li>Wide dissemination of the call across fields and communities.</li>
+            <li>Engagement with global AI/ML/NLP affinity groups; exploring attendance support where funding allows.</li>
+            <li>Diverse panels and speakers across identity and discipline.</li>
+            <li>Diverse organizing committee composition.</li>
+            <li>Support for students and scholars with limited travel budgets (subject to sponsorship).</li>
+            <li>Hybrid participation so remote attendees can follow key sessions.</li>
+          </ul>
+          <p class="fine-print">
+            Expected attendance on the order of <strong>80–120</strong> in person and <strong>20–30</strong> online
+            (proposal-level estimate). Only standard A/V for recording/streaming is assumed as a special need.
+          </p>
+        </div>
+      </section>
+
+      <section id="venue" class="section">
+        <div class="wrap venue">
+          <div>
+            <h2>Join us in Hengqin</h2>
+            <p>
+              The workshop is colocated with <strong>AACL-IJCNLP 2026</strong> in <strong>Hengqin, China</strong>. Remote
+              participation will be available for attendees who cannot travel. Practical links (venue map, transport, visa
+              hints) will be updated when the main conference publishes logistics.
+            </p>
+            <div class="inline-actions">
+              <a class="btn btn-secondary" href="https://www.aclweb.org/portal/events/acl-ijcnlp-2026" rel="noopener noreferrer">AACL 2026</a>
+              <a class="btn btn-ghost" href="#contact">Local info (TBA)</a>
+            </div>
+          </div>
+          <aside class="venue-aside">
+            <p><strong>Practical checklist</strong></p>
+            <ul>
+              <li>Conference registration &amp; workshop add-on</li>
+              <li>Venue &amp; hotels (via main conference)</li>
+              <li>Visa &amp; travel (TBA)</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="contact" class="section footer-cta">
+        <div class="wrap">
+          <h2>Stay connected</h2>
+          <p>
+            For workshop-related questions (shared task, sponsorship, accessibility), please contact the organizers.
+            A mailing list, OpenReview venue, and GitHub org will be linked here once public.
+          </p>
+          <div class="inline-actions">
+            <a class="btn btn-primary" href="mailto:dyxiong@tju.edu.cn">Email organizers</a>
+            <a class="btn btn-ghost" href="#">Mailing list (TBA)</a>
+            <a class="btn btn-ghost" href="#">OpenReview (TBA)</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <p><strong>PlurVA-LLM</strong></p>
+          <p>Pluralistic Value Alignment of LLMs · AACL 2026 · Hengqin, China</p>
+        </div>
+        <div>
+          <p><strong>Workshop</strong></p>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cfp">CFP</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#shared-task">Shared Task</a></li>
+            <li><a href="#venue">Venue</a></li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>Participate</strong></p>
+          <ul>
+            <li><a href="#participate">Submission modes</a></li>
+            <li><a href="#cfp">CFP &amp; dates</a></li>
+            <li><a href="#themes">Themes</a></li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>People</strong></p>
+          <ul>
+            <li><a href="#organizers">Organizers</a></li>
+            <li><a href="#speakers">Invited speakers</a></li>
+            <li><a href="#contact">Sponsors (TBA)</a></li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>Contact</strong></p>
+          <ul>
+            <li><a href="mailto:dyxiong@tju.edu.cn">Email</a></li>
+            <li><a href="#">Mailing list</a></li>
+            <li><a href="#">OpenReview (TBA)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <p>&copy; 2026 Workshop organizers. AACL-IJCNLP 2026 policies prevail if anything differs.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
