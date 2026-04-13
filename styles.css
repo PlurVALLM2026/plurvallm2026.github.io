@@ -383,7 +383,7 @@ h1 {
 }
 
 .news-board {
-  background: var(--surface);
+  background: #fcfbf9;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -411,7 +411,11 @@ h1 {
 .news-table th {
   font-weight: 700;
   color: var(--ink);
-  background: var(--bg-alt);
+  background: #f3f0ec;
+}
+
+.news-table tbody tr:nth-child(even) td {
+  background: rgba(30, 77, 92, 0.03);
 }
 
 .news-table td:first-child,
@@ -425,6 +429,10 @@ h1 {
 
 .news-table tbody tr td {
   height: 2.6rem;
+}
+
+.news-table tbody tr:hover td {
+  background: rgba(30, 77, 92, 0.06);
 }
 
 .speaker-list {
