@@ -382,6 +382,51 @@ h1 {
   margin-bottom: 0.4rem;
 }
 
+.news-board {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0;
+}
+
+#news.section {
+  padding-top: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.news-table th,
+.news-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.72rem 0.9rem;
+  text-align: left;
+  color: var(--ink-muted);
+}
+
+.news-table th {
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--bg-alt);
+}
+
+.news-table td:first-child,
+.news-table th:first-child {
+  width: 180px;
+}
+
+.news-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.news-table tbody tr td {
+  height: 2.6rem;
+}
+
 .speaker-list {
   margin: 0 0 1rem;
   padding-left: 1.25rem;
