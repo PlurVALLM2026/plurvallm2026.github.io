@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shared Task — PlurVA-LLM · AACL 2026</title>
+    <meta
+      name="description"
+      content="PlurVA-LLM — The First Workshop on Pluralistic Value Alignment of LLMs at AACL-IJCNLP 2026. Pluralistic alignment, shared task on three benchmarks, Hengqin, hybrid."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">PlurVA-LLM <span class="logo-w">· AACL 2026</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="cfp.html">CFP</a>
+          <a class="is-current" href="shared-task.html">Shared Task</a>
+          <a href="themes.html">Themes</a>
+          <a href="participate.html">Participate</a>
+          <a href="program.html">Program</a>
+          <a href="speakers.html">Speakers</a>
+          <a href="organizers.html">Organizers</a>
+          <a href="venue.html">Venue</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-panel">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div id="nav-panel" class="nav-panel" hidden>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cfp.html">CFP</a>
+        <a class="is-current" href="shared-task.html">Shared Task</a>
+        <a href="themes.html">Themes</a>
+        <a href="participate.html">Participate</a>
+        <a href="program.html">Program</a>
+        <a href="speakers.html">Speakers</a>
+        <a href="organizers.html">Organizers</a>
+        <a href="venue.html">Venue</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section page-hero-section">
+        <div class="wrap">
+          <div class="page-hero-banner">
+            <h1 class="page-hero-title">Shared Task</h1>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="shared-task" class="section section-alt">
+        <div class="wrap">
+          <h2>Benchmark suite &amp; shared task</h2>
+          <p class="section-lead">
+            The shared task evaluates LLMs’
+            <strong>value alignment</strong> and <strong>normative reasoning</strong> across <strong>adversarial</strong>,
+            <strong>daily</strong>, and <strong>principle-driven</strong> settings. It is organized around
+            <strong>three benchmarks</strong> in <strong>Indonesian</strong>, <strong>Sri Lankan (English + Sinhala)</strong>,
+            and <strong>Chinese</strong> (the Chinese track may use <strong>attack-style</strong> or <strong>scenario-style</strong>
+            setups comparable to the other two). The competition <strong>platform</strong>, full timeline, and registration will be announced later.
+          </p>
+          <ul class="task-infra">
+            <li><strong>Evaluation protocol</strong> — a dedicated scoring framework for the task.</li>
+            <li><strong>Baselines</strong> — reference implementations or scores for comparison.</li>
+            <li><strong>Evaluation code</strong> — release policy will be announced.</li>
+          </ul>
+          <p class="section-lead tight">
+            Dataset statistics below come from benchmark papers and proposals; <strong>final rules may differ</strong> from what is on this page.
+          </p>
+
+          <div class="bench-grid">
+            <article class="bench">
+              <h3>D2VBench</h3>
+              <p><strong>Chinese · scenario-class everyday dilemmas</strong></p>
+              <p>
+                Built on a four-layer hierarchical value system (Livelihood, Social Order, Civilization) with
+                <strong>158</strong> fine-grained leaf concepts and on the order of <strong>~10k</strong> instances. Scenarios
+                are constructed through a four-stage pipeline (concept inventory → generation → quality control → reference
+                &amp; judge calibration), with <strong>Align-Score</strong>, five-dimensional rationale quality, a structured
+                reason bank, and alignment metrics against human and referee models—suited for normative reasoning beyond
+                single-label classification. A system-level proposal also targets on the order of <strong>~20k</strong>
+                scenario samples with free-form responses vs. human-curated references.
+              </p>
+            </article>
+            <article class="bench">
+              <h3>Indonesian · Pancasila-Dilemmas</h3>
+              <p><strong>Indonesia · multiple-choice value dilemmas</strong></p>
+              <p>
+                <strong>1,834</strong> four-option items grounded in the <strong>Pancasila</strong> five principles,
+                sourced from <em>Kompas</em> headlines with crowd and expert validation. Evaluation can report accuracy and
+                distributional agreement (e.g. JSD / TVD), including majoritarian vs. “any-agreement” style metrics against
+                human majorities or full distributions.
+              </p>
+            </article>
+            <article class="bench">
+              <h3>LKvaluesBench (Sri Lanka)</h3>
+              <p><strong>Sri Lanka · bilingual judgment alignment</strong></p>
+              <p>
+                <strong>2,000</strong> instances in <strong>English</strong> and <strong>Sinhala</strong> (paired translations)
+                over <strong>40</strong> survey-derived societal values. Labels indicate which language carries the judgment
+                (A / B / BOTH / neither). Reports model–human alignment and cross-lingual consistency—testing whether
+                “alignment” transfers across languages within one cultural context.
+              </p>
+            </article>
+          </div>
+
+          <p class="fine-print">
+            Detailed task description, data specifications, baselines, and leaderboards will be released with the official
+            shared-task announcement. Participation is expected from on the order of <strong>10–20 teams</strong> (proposal
+            estimate), with results presented in a dedicated session.
+          </p>
+          <div class="inline-actions">
+            <a class="btn btn-primary" href="mailto:plurvallm2026@outlook.com">Task contact</a>
+            <a class="btn btn-secondary" href="cfp.html">Call for Papers</a>
+            <a class="btn btn-ghost" href="contact.html">More contact options</a>
+          </div>
+        </div>
+      </section>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <p><strong>PlurVA-LLM</strong></p>
+          <p>Pluralistic Value Alignment of LLMs · AACL 2026 · Hengqin, China</p>
+        </div>
+        <div>
+          <p><strong>Workshop</strong></p>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="cfp.html">CFP</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="shared-task.html">Shared Task</a></li>
+            <li><a href="venue.html">Venue</a></li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>Participate</strong></p>
+          <ul>
+            <li><a href="participate.html">Submission modes</a></li>
+            <li><a href="cfp.html">CFP &amp; dates</a></li>
+            <li><a href="themes.html">Themes</a></li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>People</strong></p>
+          <ul>
+            <li><a href="organizers.html">Organizers</a></li>
+            <li><a href="speakers.html">Invited speakers</a></li>
+            <li><a href="contact.html">Sponsors (TBA)</a></li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>Contact</strong></p>
+          <ul>
+            <li><a href="mailto:plurvallm2026@outlook.com">Email</a></li>
+            <li><a href="#">Mailing list</a></li>
+            <li><a href="#">OpenReview (TBA)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <p>&copy; 2026 Workshop organizers. AACL-IJCNLP 2026 policies prevail if anything differs.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
