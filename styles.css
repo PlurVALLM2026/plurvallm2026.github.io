@@ -492,6 +492,13 @@ h1 {
   object-position: calc(50% - 20%) center;
 }
 
+/* Jingting Zheng: keep center and zoom in 20% */
+.organizer-photo--zoom-center img {
+  object-position: center calc(50% - 25%);
+  transform: scale(1.15);
+  transform-origin: center center;
+}
+
 .organizer-card h3 {
   margin: 0 0 0.35rem;
   font-size: 1.15rem;
