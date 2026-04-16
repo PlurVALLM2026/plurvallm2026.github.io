@@ -155,6 +155,10 @@ body {
   background: var(--surface);
 }
 
+.nav-panel[hidden] {
+  display: none !important;
+}
+
 .nav-panel a {
   padding: 0.55rem 0.5rem;
   color: var(--ink);
