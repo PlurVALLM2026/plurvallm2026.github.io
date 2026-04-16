@@ -785,3 +785,68 @@ h1 {
   color: var(--accent) !important;
   border-color: #fff;
 }
+
+
+.docx-verbatim {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.shared-task-doc .table-wrap {
+  max-width: 72rem;
+  width: 100%;
+}
+
+.shared-task-doc .example-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #fcfbf9;
+  border: 1.5px solid #c4b8a8;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.shared-task-doc .example-table th,
+.shared-task-doc .example-table td {
+  border: 1px solid #d8cec0;
+  padding: 0.7rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.shared-task-doc .example-table th {
+  width: 14rem;
+  background: #f3f0ec;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.shared-task-doc .example-table tbody tr:nth-child(even) td {
+  background: rgba(30, 77, 92, 0.03);
+}
+
+.json-output {
+  margin: 0 0 1rem;
+  padding: 0.9rem 1rem;
+  max-width: 72rem;
+  background: #f3f0eb;
+  border: 1.5px solid #a9a196;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
