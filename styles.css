@@ -194,7 +194,7 @@ body {
 .hero-welcome-banner {
   margin: 0 0 1.75rem;
   border-radius: var(--radius);
-  padding: 0;
+  padding: clamp(0.65rem, 3vw, 1.25rem) clamp(0.5rem, 4vw, 1.5rem);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   aspect-ratio: 8188 / 2476;
@@ -209,12 +209,13 @@ body {
 .hero-welcome-title {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(2.3rem, 4.8vw, 3.7rem);
+  font-size: clamp(1.05rem, 3.8vw + 0.55rem, 3.7rem);
   line-height: 1.05;
   font-weight: 600;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-  max-width: 95%;
+  max-width: 100%;
+  text-wrap: balance;
 }
 
 .hero-welcome-copy {
@@ -228,8 +229,10 @@ body {
   margin: 0;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-  font-size: clamp(1.43rem, 3vw, 2.03rem);
+  font-size: clamp(0.82rem, 2.4vw + 0.45rem, 2.03rem);
   line-height: 1.2;
+  max-width: 100%;
+  text-wrap: balance;
 }
 
 .page-hero-section {
@@ -247,15 +250,19 @@ body {
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  padding-inline: clamp(0.5rem, 4vw, 1.5rem);
 }
 
 .page-hero-title {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(5.4rem, 12vw, 8.8rem);
-  line-height: 1.2;
+  /* 原先用 5.4rem 作下限，窄屏会锁死过大；改为 vw+rem 流体，大屏仍可到 ~8.8rem */
+  font-size: clamp(1.35rem, 5.5vw + 0.55rem, 8.8rem);
+  line-height: 1.15;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  max-width: 100%;
+  text-wrap: balance;
 }
 
 .eyebrow {
