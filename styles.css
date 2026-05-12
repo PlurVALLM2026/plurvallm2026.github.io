@@ -848,6 +848,52 @@ h1 {
   background: rgba(30, 77, 92, 0.03);
 }
 
+/* Leaderboard / multi-column grids — same colors and borders as .example-table */
+.shared-task-doc .task-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  background: #fcfbf9;
+  border: 1.5px solid #c4b8a8;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.shared-task-doc .task-matrix-table th,
+.shared-task-doc .task-matrix-table td {
+  border: 1px solid #d8cec0;
+  padding: 0.7rem 0.85rem;
+  text-align: left;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.shared-task-doc .task-matrix-table thead th {
+  background: #f3f0ec;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.shared-task-doc .task-matrix-table tbody td {
+  color: var(--ink-muted);
+}
+
+.shared-task-doc .task-matrix-table tbody tr:nth-child(even) td {
+  background: rgba(30, 77, 92, 0.03);
+}
+
+.shared-task-doc .task-matrix-table tbody tr:hover td {
+  background: rgba(30, 77, 92, 0.06);
+}
+
+.shared-task-doc .task-matrix-table th:nth-child(n + 3),
+.shared-task-doc .task-matrix-table td:nth-child(n + 3) {
+  text-align: right;
+}
+
 .json-output {
   margin: 0 0 1rem;
   padding: 0.9rem 1rem;
@@ -860,4 +906,97 @@ h1 {
   font-size: 0.9rem;
   line-height: 1.5;
   overflow-x: auto;
+}
+
+/* Subpage back link (e.g. Registration and Leaderboard → Shared Task) */
+.doc-back-nav {
+  margin: 0 0 2rem;
+}
+
+.doc-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 1.1rem 0.45rem 0.5rem;
+  max-width: 100%;
+  text-decoration: none;
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.35;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.doc-back-link:hover {
+  color: var(--accent);
+  border-color: rgba(30, 77, 92, 0.28);
+  box-shadow: 0 2px 14px rgba(30, 77, 92, 0.1);
+  transform: translateY(-1px);
+}
+
+.doc-back-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.doc-back-link__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent-wash);
+  color: var(--accent);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.doc-back-link:hover .doc-back-link__icon {
+  background: var(--accent);
+  color: #fff;
+  transform: translateX(-2px);
+}
+
+.doc-back-link__label strong {
+  font-weight: 700;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+
+.doc-back-link:hover .doc-back-link__label strong {
+  color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .doc-back-link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+
+  .doc-back-link__label {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doc-back-link,
+  .doc-back-link__icon {
+    transition: none;
+  }
+
+  .doc-back-link:hover,
+  .doc-back-link:hover .doc-back-link__icon {
+    transform: none;
+  }
 }
