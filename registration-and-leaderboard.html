@@ -6,7 +6,7 @@
     <title>Registration and Leaderboard — Shared Task · PlurVA-LLM · AACL 2026</title>
     <meta
       name="description"
-      content="PlurVA-LLM shared task: registration, submission, evaluation metrics, and leaderboard for Track 1 and Track 2."
+      content="PlurVA-LLM shared task: registration. Submission and leaderboard: To be Announced."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,9 +74,7 @@
           <p class="section-lead tight">
             Maximum number of participants in a team: 4 (including tutor/supervisor). An individual cannot be part of multiple teams.
           </p>
-          <p class="section-lead tight">
-            After submission, you will receive an email with detailed instructions for the dataset and submission.
-          </p>
+          <p class="section-lead tight">Dataset access and submission instructions: To be Announced.</p>
 
           <h2 class="subsection-title subsection-title-em">Benchmark and Evaluation Metrics</h2>
           <p class="section-lead tight">
@@ -88,103 +86,10 @@
             <li><strong>Sri Lankan (1,000 instances in Sinhala)</strong>: Evaluates two statements (labeled A, B, Both, or None) grounded in 40 survey-derived societal values.</li>
           </ul>
 
-          <p class="section-lead tight">Each team must submit one prediction JSON file covering all hidden test instances across all three countries. The format of the output:</p>
-          <pre class="json-output"><code>{
-  &quot;dataset&quot;: &quot;&lt;dataset_name&gt;&quot;,
-  &quot;id&quot;: &quot;&lt;question_id&gt;&quot;,
-  &quot;LLM_Output&quot;: &quot;&lt;exact_answer&gt;&quot;
-}</code></pre>
-          <p class="section-lead tight">The required <code>LLM_Output</code> would be:</p>
-          <ul class="task-infra">
-            <li><strong>China</strong>: one label from {A, B, C, D} for each four-option multiple-choice item.</li>
-            <li><strong>Indonesia</strong>: one label from {A, B, C, D} for each four-option multiple-choice item.</li>
-            <li><strong>Sri Lanka</strong>: one label from {A, B, Both, None} for each item.</li>
-          </ul>
-          <p class="section-lead tight">
-            The prediction JSON file can be submitted via email to <a href="mailto:plurvallm2026@outlook.com">plurvallm2026@outlook.com</a>.
-            Use the title format <strong>Submission_XX_YY_ZZ</strong>, where <strong>XX</strong> is the team name, <strong>YY</strong> is the affiliation, and <strong>ZZ</strong> is Track1 or Track2.
-          </p>
-          <p class="fine-print">Submissions that do not follow the required output format may be treated as invalid for the affected instances.</p>
-          <p class="section-lead tight">
-            Submissions will be evaluated primarily on “Accuracy”. An output is scored as 1 if correct and 0 if incorrect. LLMs will first receive an accuracy score for each of the three individual datasets. The metrics are based on:
-          </p>
-          <ul class="task-infra">
-            <li><strong>China (4 options with a gold answer)</strong><br />“1” if same with gold answer, “0” if different</li>
-            <li><strong>Indonesia (4 options with one or two gold answers)</strong><br />“1” if same with gold answer, “0” if different</li>
-            <li><strong>Sri Lanka (2 options, gold answer can be one of those two, agree with both, or disagree with both)</strong><br />“1” if same with gold answer, “0” if different</li>
-          </ul>
-          <p class="section-lead tight">
-            The final ranking score will be the “macro-average” of these three dataset-level scores. Our team will perform the scoring and update results on the leaderboard.
-          </p>
+          <p class="section-lead tight">Submission format, delivery, and scoring details: To be Announced</p>
 
           <h2 class="subsection-title subsection-title-em">Leaderboard</h2>
-          <h3 class="subsection-title">Track 1: Resource-Constrained Track</h3>
-          <div class="table-wrap">
-            <table class="task-matrix-table">
-              <thead>
-                <tr>
-                  <th>Team name</th>
-                  <th>Affiliation</th>
-                  <th>Chinese</th>
-                  <th>Indonesian</th>
-                  <th>Sri Lankan</th>
-                  <th>Macro-average</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Baseline (gemma-3-4b-it)</td>
-                  <td>—</td>
-                  <td>0.4595</td>
-                  <td>0.614</td>
-                  <td>0.701</td>
-                  <td>0.5915</td>
-                </tr>
-                <tr>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3 class="subsection-title">Track 2: Open Track</h3>
-          <div class="table-wrap">
-            <table class="task-matrix-table">
-              <thead>
-                <tr>
-                  <th>Team name</th>
-                  <th>Affiliation</th>
-                  <th>Chinese</th>
-                  <th>Indonesian</th>
-                  <th>Sri Lankan</th>
-                  <th>Macro-average</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Baseline (claude-sonnet-4.6)</td>
-                  <td>—</td>
-                  <td>0.6788</td>
-                  <td>0.7028</td>
-                  <td>0.958</td>
-                  <td>0.7799</td>
-                </tr>
-                <tr>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>—</td>
-                  <td>—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <p class="section-lead tight">To be Announced</p>
 
           <div class="inline-actions">
             <a class="btn btn-primary" href="shared-task.html">Shared Task overview</a>
