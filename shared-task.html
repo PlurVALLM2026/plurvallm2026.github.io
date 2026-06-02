@@ -62,7 +62,7 @@
           <h3 class="subsection-title subsection-title-em">Introduction</h3>
           <p class="section-lead">As Large Language Models (LLMs) increasingly serve as global digital infrastructure, the problem of “value alignment” has become central to AI research. However, most existing alignment benchmarks either assume a single dominant value framework or evaluate LLMs within only one cultural context. This shared task focuses instead on pluralistic value alignment: the ability of a single system to adapt its responses to different, locally grounded value contexts rather than defaulting to one universal normative style.</p>
           <p class="section-lead">The shared task asks participants to build one unified system that, given a scenario and a target country, produces the response or judgment that is most consistent with the human value preferences reflected in that country’s annotated data. The benchmark integrates three country-specific datasets while preserving their native task formats: Chinese and Indonesian value datasets are formulated as four-option multiple-choice question answering, and Sri Lanka’s dataset as a four-way decision task in which systems must choose A, B, Both, or None. The task is unified at the level of objective and evaluation by standardizing all datasets into a single answer format.</p>
-          <p class="section-lead">To support method development while preserving a strong generalization test, the benchmark is split into a development set that will be publicly available and an evaluation set. The public portion will be released with labels and may be used for prompt design, supervised fine-tuning (SFT), agent construction, retrieval design, or internal validation. The remaining 80% will be held out for official evaluation. Participants may use country-aware prompting, routing, or adaptation strategies internally, but they must submit one system and one prediction JSON file covering all countries.</p>
+          <p class="section-lead">To support method development while preserving a strong generalization test, the benchmark is split into a development set that will be publicly available and an evaluation set. The public portion will be released with labels and may be used for prompt design, supervised fine-tuning (SFT), agent construction, retrieval design, or internal validation. The remaining 80% will be held out for official evaluation. Participants may use country-aware prompting, routing, or adaptation strategies internally, but they must submit one system and one prediction file covering all countries.</p>
           <p class="section-lead">Importantly, the shared task does not assume that any country can be reduced to a single fixed or homogeneous value system. Rather, it evaluates how well LLMs can match the plural and situated human judgments represented in the benchmark data. To reflect this design principle, official ranking emphasizes balanced performance across countries, so that strong results on one country cannot compensate for weak results on another.</p>
           <h3 class="subsection-title subsection-title-em">Challenge Goals</h3>
           <p class="section-lead tight">This shared task has three main goals:</p>
@@ -77,7 +77,7 @@
             <article class="card">
               <h3>Track 1: Resource-Constrained Track</h3>
               <p class="section-lead tight">This track is intended for efficient and broadly accessible approaches. Systems in this track must use LLMs of no more than 8 billion parameters. Closed commercial APIs and agents/tools usage are not permitted. For Mixture-of-Experts (MoE) models, we also restrict the parameter size based on total parameters.</p>
-              <p class="section-lead tight">Participants may use prompting and fine-tuning, preference optimization, and routing provided that all language-generating components satisfy the model-size limit and no larger hidden model is used anywhere in the system. Teams must submit a brief system description reporting the base model, parameter size, hardware, and compute usage, including the code and models.</p>
+              <p class="section-lead tight">Participants may use prompting and fine-tuning, preference optimization, and routing provided that all language-generating components satisfy the model-size limit and no larger hidden model is used anywhere in the system. Teams must submit a brief system description reporting the base model, parameter size, hardware, and compute usage including the code and models.</p>
             </article>
             <article class="card">
               <h3>Track 2: Open Track</h3>
@@ -137,16 +137,30 @@
             <li><strong>Indonesia (4 options with one or two gold answers)</strong><br />“1” if same with gold answer, “0” if different</li>
             <li><strong>Sri Lanka (2 options, gold answer can be one of those two, agree with both, or disagree with both)</strong><br />“1” if same with gold answer, “0” if different</li>
           </ul>
-          <p class="section-lead tight">The final ranking score will be the “macro-average” of these three dataset-level scores.</p>
+          <p class="section-lead tight">The final ranking score will be the “macro-average” of these 3 dataset-level scores.</p>
           <h3 class="subsection-title subsection-title-em">Registration and Leaderboard</h3>
           <p class="section-lead tight">Participants are required to register through the provided registration link. See the <a href="registration-and-leaderboard.html">Registration and leaderboard</a> page for details.</p>
+          <h3 class="subsection-title subsection-title-em">Paper Submission</h3>
+          <p class="section-lead tight">Participants are invited to submit a paper documenting their model or system for the PlurVA-LLM workshop. Submissions should detail the methodology and results for the selected track. Paper titles must begin with &ldquo;PlurVA-LLM-2026 Shared Task Track-N: &rdquo;, where N represents Track-1 or Track-2. All shared task papers will undergo the same peer-review process as regular workshop submissions.</p>
           <h3 class="subsection-title subsection-title-em">Submission Details</h3>
-          <p class="section-lead tight">To be Announced.</p>
+          <p class="section-lead tight">Each team must submit one prediction jsonl file covering all hidden test instances across all three countries. The format of the output:</p>
+          <pre><code>{
+  &ldquo;dataset&rdquo;: &ldquo;&lt;dataset_name&gt;&rdquo;,
+  &ldquo;id&rdquo;: &ldquo;&lt;question_id&gt;&rdquo;,
+  &ldquo;LLM_Output&rdquo;: &ldquo;&lt;exact_answer&gt;&rdquo;
+}</code></pre>
+          <p class="section-lead tight">The required LLM_Output would be:</p>
+          <ul class="task-infra">
+            <li><strong>China</strong>: one label from {A, B, C, D} for each four-option multiple-choice item.</li>
+            <li><strong>Indonesia</strong>: one label from {A, B, C, D} for each four-option multiple-choice item.</li>
+            <li><strong>Sri Lanka</strong>: one label from {A, B, Both, None} for each item.</li>
+          </ul>
+          <p class="section-lead tight">The prediction json file can be submitted via leaderboard website: <a href="https://www.codabench.org/competitions/16791/" rel="noopener noreferrer">Track-1 Resource-Constrained Track</a> <a href="https://www.codabench.org/competitions/16818/" rel="noopener noreferrer">Track-2 Open Track</a>. The file must be saved as &ldquo;predictions.jsonl&rdquo; and zipped. Submissions that do not follow the required output format may be treated as invalid for the affected instances.</p>
           <h3 class="subsection-title subsection-title-em">Timeline</h3>
           <ul class="task-infra">
             <li>May 15, 2026 — Registration opens</li>
             <li>May 20, 2026 — Development sets released</li>
-            <li>July 1, 2026 — Test sets released and leaderboard opens for submission</li>
+            <li>July 1, 2026 — Test sets released and leaderboard pens for submission</li>
             <li>July 20, 2026 — Leaderboard submission deadline</li>
             <li>August 1, 2026 — Final ranking and announcement</li>
             <li>August 15, 2026 — Paper submission deadline</li>

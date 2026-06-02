@@ -68,13 +68,18 @@
 
           <h2 class="subsection-title subsection-title-em">Registration</h2>
           <p class="section-lead tight">
-            You can register using this form:
-            <a href="https://docs.google.com/forms/d/1imk0plIxxzoKLssBjHV5unpNGIeZ_pp9vfxCMni4gwc" rel="noopener noreferrer">Registration link</a>.
+            1.You can register in this link:
+            <a href="https://docs.google.com/forms/d/1imk0plIxxzoKLssBjHV5unpNGIeZ_pp9vfxCMni4gwc" rel="noopener noreferrer">Registration Link</a>.
           </p>
           <p class="section-lead tight">
-            Maximum number of participants in a team: 4 (including tutor/supervisor). An individual cannot be part of multiple teams.
+            2.Max number of participants in a team: 4 (including tutor/supervisor). An individual cannot be part of multiple teams.
           </p>
-          <p class="section-lead tight">Dataset access and submission instructions: To be Announced.</p>
+          <p class="section-lead tight">
+            3.After submission, you will receive an email with detailed instructions for the development set and submission details.
+          </p>
+          <p class="section-lead tight">
+            4.The test set will be released when the leaderboard is open for submission.
+          </p>
 
           <h2 class="subsection-title subsection-title-em">Benchmark and Evaluation Metrics</h2>
           <p class="section-lead tight">
@@ -86,10 +91,24 @@
             <li><strong>Sri Lankan (1,000 instances in Sinhala)</strong>: Evaluates two statements (labeled A, B, Both, or None) grounded in 40 survey-derived societal values.</li>
           </ul>
 
-          <p class="section-lead tight">Submission format, delivery, and scoring details: To be Announced</p>
+          <p class="section-lead tight">Submission format, delivery, and scoring details:</p>
+          <p class="section-lead tight">Each team must submit one prediction jsonl file covering all hidden test instances across all three countries. The format of the output:</p>
+          <pre><code>{
+  &ldquo;dataset&rdquo;: &ldquo;&lt;dataset_name&gt;&rdquo;,
+  &ldquo;id&rdquo;: &ldquo;&lt;question_id&gt;&rdquo;,
+  &ldquo;LLM_Output&rdquo;: &ldquo;&lt;exact_answer&gt;&rdquo;
+}</code></pre>
+          <p class="section-lead tight">The required LLM_Output would be:</p>
+          <ul class="task-infra">
+            <li><strong>China</strong>: one label from {A, B, C, D} for each four-option multiple-choice item.</li>
+            <li><strong>Indonesia</strong>: one label from {A, B, C, D} for each four-option multiple-choice item.</li>
+            <li><strong>Sri Lanka</strong>: one label from {A, B, Both, None} for each item.</li>
+          </ul>
+          <p class="section-lead tight">The prediction json file can be submitted via leaderboard website: <a href="https://www.codabench.org/competitions/16791/" rel="noopener noreferrer">Track-1 Resource-Constrained Track</a> <a href="https://www.codabench.org/competitions/16818/" rel="noopener noreferrer">Track-2 Open Track</a>. The file must be saved as &ldquo;predictions.jsonl&rdquo; and zipped. Submissions that do not follow the required output format may be treated as invalid for the affected instances.</p>
 
           <h2 class="subsection-title subsection-title-em">Leaderboard</h2>
-          <p class="section-lead tight">To be Announced</p>
+          <p class="section-lead tight">Track-1: Resource-Constrained Track <br /><a href="https://www.codabench.org/competitions/16791/" rel="noopener noreferrer">https://www.codabench.org/competitions/16791/</a></p>
+          <p class="section-lead tight">Track-2: Open Track <br /><a href="https://www.codabench.org/competitions/16818/" rel="noopener noreferrer">https://www.codabench.org/competitions/16818/</a></p>
 
           <div class="inline-actions">
             <a class="btn btn-primary" href="shared-task.html">Shared Task overview</a>
