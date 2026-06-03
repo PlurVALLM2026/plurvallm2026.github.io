@@ -1000,3 +1000,77 @@ h1 {
     transform: none;
   }
 }
+
+/* ── Best System Awards banner ── */
+.award-banner {
+  margin: 1.5rem 0 2.5rem;
+  background: linear-gradient(135deg, #fef7e9 0%, #fdf0d5 50%, #fae9c5 100%);
+  border: 2px solid #d4a84b;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(212, 168, 75, 0.25), 0 1px 4px rgba(26, 31, 36, 0.06);
+  padding: 1.25rem 1.5rem;
+  position: relative;
+}
+
+.award-banner::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.award-banner__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.award-banner__icon {
+  flex-shrink: 0;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.award-banner__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.award-banner__title {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #7a5800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.award-banner__text {
+  margin: 0;
+  font-size: 1rem;
+  color: #5a4420;
+  line-height: 1.55;
+  max-width: 72rem;
+}
+
+@media (max-width: 480px) {
+  .award-banner__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .award-banner__icon {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .award-banner {
+    box-shadow: 0 1px 4px rgba(26, 31, 36, 0.06);
+  }
+}
