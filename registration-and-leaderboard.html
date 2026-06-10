@@ -92,6 +92,7 @@
           </ul>
 
           <p class="section-lead tight">Submission format, delivery, and scoring details:</p>
+          <p class="section-lead tight">The dev set will be sent to the teams by email after registration. The test set will be sent to the whole team at 1st July.</p>
           <p class="section-lead tight">Each team must submit one prediction jsonl file covering all hidden test instances across all three countries. The format of the output:</p>
           <pre><code>{
   &ldquo;dataset&rdquo;: &ldquo;&lt;dataset_name&gt;&rdquo;,
@@ -107,8 +108,56 @@
           <p class="section-lead tight">The prediction json file can be submitted via leaderboard website: <a href="https://www.codabench.org/competitions/16791/" rel="noopener noreferrer">Track-1 Resource-Constrained Track</a> and <a href="https://www.codabench.org/competitions/16818/" rel="noopener noreferrer">Track-2 Open Track</a>. The file must be saved as &ldquo;predictions.jsonl&rdquo; and zipped. Submissions that do not follow the required output format may be treated as invalid for the affected instances.</p>
 
           <h2 class="subsection-title subsection-title-em">Leaderboard</h2>
-          <p class="section-lead tight">Track-1: Resource-Constrained Track <br /><a href="https://www.codabench.org/competitions/16791/" rel="noopener noreferrer">https://www.codabench.org/competitions/16791/</a></p>
-          <p class="section-lead tight">Track-2: Open Track <br /><a href="https://www.codabench.org/competitions/16818/" rel="noopener noreferrer">https://www.codabench.org/competitions/16818/</a></p>
+
+          <h3 class="subsection-title">Track 1: Resource-Constrained Track</h3>
+          <p class="section-lead tight">Live leaderboard: <a href="https://www.codabench.org/competitions/16791/" rel="noopener noreferrer">https://www.codabench.org/competitions/16791/</a></p>
+          <div class="table-wrap"><table class="task-matrix-table">
+            <thead>
+              <tr>
+                <th>Team Name</th>
+                <th>Affiliation</th>
+                <th>Chinese</th>
+                <th>Indonesian</th>
+                <th>Sri Lankan</th>
+                <th>Macro-Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Baseline (gemma-3-4b-it)</td>
+                <td></td>
+                <td>0.460</td>
+                <td>0.621</td>
+                <td>0.718</td>
+                <td>0.600</td>
+              </tr>
+            </tbody>
+          </table></div>
+
+          <h3 class="subsection-title">Track 2: Open Track</h3>
+          <p class="section-lead tight">Live Leaderboard: <a href="https://www.codabench.org/competitions/16818/" rel="noopener noreferrer">https://www.codabench.org/competitions/16818/</a></p>
+          <div class="table-wrap"><table class="task-matrix-table">
+            <thead>
+              <tr>
+                <th>Teams</th>
+                <th>Affiliation</th>
+                <th>Chinese</th>
+                <th>Indonesian</th>
+                <th>Sri Lankan</th>
+                <th>Macro-Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Baseline (claude-sonnet-4.6)</td>
+                <td></td>
+                <td>0.683</td>
+                <td>0.696</td>
+                <td>0.961</td>
+                <td>0.780</td>
+              </tr>
+            </tbody>
+          </table></div>
 
           <div class="inline-actions">
             <a class="btn btn-primary" href="shared-task.html">Shared Task overview</a>
