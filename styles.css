@@ -1074,3 +1074,56 @@ h1 {
     box-shadow: 0 1px 4px rgba(26, 31, 36, 0.06);
   }
 }
+
+/* ── Student Co-organizers ── */
+.student-coorg-section {
+  background: var(--bg-alt);
+}
+
+.student-coorg-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.student-coorg-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.student-coorg-photo {
+  width: 100%;
+  max-width: 160px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.student-coorg-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.student-coorg-photo--nudge-down img {
+  object-position: center 30%;
+}
+
+.student-coorg-photo--nudge-down-more img {
+  object-position: center 20%;
+}
+
+.student-coorg-name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+}
