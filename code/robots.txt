@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://plurvallm2026.github.io/code/sitemap.xml
