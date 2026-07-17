@@ -1129,113 +1129,132 @@ h1 {
 }
 
 /* ── Important Dates (DDL) ── */
-.ddl-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 0.85rem;
-  margin: 0;
+/* 灵感来自 ACL/EMNLP 重要日期风格：左侧竖排日期 + 右侧事件描述 + 行分隔线 */
+
+.dates-section {
+  background: var(--bg-alt);
 }
 
-.ddl-table tbody tr {
+.ddl-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ddl-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.ddl-item:first-child {
+  padding-top: 0;
+}
+
+.ddl-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ddl-item__date-box {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 6.5rem;
+  padding: 0.75rem 0.5rem;
   background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.ddl-table tbody tr td {
-  padding: 1.25rem 1.25rem;
   border: 1px solid var(--border);
-  vertical-align: middle;
-}
-
-/* 左圆角：第一列左 */
-.ddl-table tbody tr td:first-child {
-  border-radius: var(--radius) 0 0 var(--radius);
-  border-right: none;
-}
-
-/* 右圆角：最后一列右 */
-.ddl-table tbody tr td:last-child {
-  border-radius: 0 var(--radius) var(--radius) 0;
-  border-left: none;
-}
-
-.ddl-table__date-cell {
-  width: 1px;
-  white-space: nowrap;
-  padding: 1.25rem 1rem;
-  text-align: center;
-  font-weight: 700;
-  font-size: 0.95rem;
-  line-height: 1.3;
-  color: #fff;
-  border: 1px solid var(--accent) !important;
-  background: var(--accent);
   border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  align-self: flex-start;
+  text-align: center;
+  line-height: 1.2;
 }
 
-.ddl-table__desc-cell {
-  background: var(--surface);
-  line-height: 1.6;
+.ddl-item__month {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.15rem;
 }
 
-.ddl-table__title {
-  display: block;
-  margin-bottom: 0.35rem;
-  font-size: 1.05rem;
+.ddl-item__day {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.1rem;
+}
+
+.ddl-item__year {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.ddl-item__body {
+  flex: 1;
+  min-width: 0;
+  padding-top: 0.2rem;
+}
+
+.ddl-item__title {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--ink);
 }
 
-.ddl-table__text {
-  display: block;
+.ddl-item__desc {
+  margin: 0;
   font-size: 0.95rem;
   color: var(--ink-muted);
+  line-height: 1.6;
   max-width: 72rem;
 }
 
-/* 覆盖 td:first-child 的 border-radius，让日期格独立圆角 */
-.ddl-table tbody tr td.ddl-table__date-cell {
-  border-radius: var(--radius-sm);
-  border: none;
+/* 窄屏：改为竖排，日期框在上方 */
+@media (max-width: 600px) {
+  .ddl-item {
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1.25rem 0;
+  }
+
+  .ddl-item__date-box {
+    flex-direction: row;
+    width: 100%;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+    justify-content: center;
+  }
+
+  .ddl-item__month {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+  }
+
+  .ddl-item__day {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  .ddl-item__year {
+    font-size: 0.8rem;
+  }
+
+  .ddl-item__body {
+    padding-top: 0;
+  }
 }
 
-/* 窄屏下改成竖排布局 */
-@media (max-width: 600px) {
-  .ddl-table,
-  .ddl-table tbody,
-  .ddl-table tbody tr,
-  .ddl-table tbody tr td {
-    display: block;
-  }
-
-  .ddl-table {
-    border-spacing: 0;
-  }
-
-  .ddl-table tbody tr {
-    margin-bottom: 1rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-  }
-
-  .ddl-table tbody tr td {
-    border: none !important;
-    border-radius: 0 !important;
-    width: 100%;
-  }
-
-  .ddl-table__date-cell {
-    text-align: center;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    background: var(--accent);
-    color: #fff;
-    border-radius: 0 !important;
-  }
-
-  .ddl-table__desc-cell {
-    padding: 0.75rem 1rem 1rem;
+@media (prefers-reduced-motion: reduce) {
+  .ddl-item {
+    transition: none;
   }
 }
