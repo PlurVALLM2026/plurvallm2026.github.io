@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration and Leaderboard — PlurVA-LLM Shared Task 2026 · AACL-IJCNLP 2026</title>
+    <meta
+      name="description"
+      content="Register for the PlurVA-LLM Shared Task on pluralistic value alignment. Track 1 & Track 2 leaderboards with live scores on Chinese, Indonesian & Sri Lankan benchmarks."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://plurvallm2026.github.io/code/registration-and-leaderboard.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Registration and Leaderboard — PlurVA-LLM Shared Task 2026" />
+    <meta property="og:description" content="Register for the PlurVA-LLM Shared Task and view live leaderboard results across China, Indonesia & Sri Lanka benchmarks." />
+    <meta property="og:url" content="https://plurvallm2026.github.io/code/registration-and-leaderboard.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://plurvallm2026.github.io/code/images/about/about-hero.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Registration and Leaderboard — PlurVA-LLM Shared Task" />
+    <meta name="twitter:description" content="Register and view live leaderboard for the PlurVA-LLM Shared Task on pluralistic value alignment." />
+    <meta name="twitter:image" content="https://plurvallm2026.github.io/code/images/about/about-hero.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">PlurVA-LLM <span class="logo-w">· The First Workshop on Pluralistic Value Alignment of LLMs · AACL 2026</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="cfp.html">CFP</a>
+          <a class="is-current" href="shared-task.html">Shared Task</a>
+          <a href="speakers.html">Speakers</a>
+          <a href="organizers.html">Organizers</a>
+          <a href="sponsorship.html">Sponsorship</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-panel">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div id="nav-panel" class="nav-panel" hidden>
+        <a href="index.html">Home</a>
+        <a href="cfp.html">CFP</a>
+        <a class="is-current" href="shared-task.html">Shared Task</a>
+        <a href="speakers.html">Speakers</a>
+        <a href="organizers.html">Organizers</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section page-hero-section">
+        <div class="wrap">
+          <div class="page-hero-banner">
+            <h1 class="page-hero-title">Registration and Leaderboard</h1>
+          </div>
+        </div>
+      </section>
+      <section class="section section-alt shared-task-doc" id="registration-leaderboard">
+        <div class="wrap">
+          <nav class="doc-back-nav" aria-label="Back to Shared Task">
+            <a class="doc-back-link" href="shared-task.html">
+              <span class="doc-back-link__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="doc-back-link__label">Back to <strong>Shared Task</strong> overview</span>
+            </a>
+          </nav>
+
+          <h2 class="subsection-title subsection-title-em">Registration</h2>
+          <p class="section-lead tight">
+            1.You can register in this link:
+            <a href="https://docs.google.com/forms/d/1imk0plIxxzoKLssBjHV5unpNGIeZ_pp9vfxCMni4gwc" rel="noopener noreferrer">Registration Link</a>.
+          </p>
+          <p class="section-lead tight">
+            2.Max number of participants in a team: 4 (including tutor/supervisor). An individual cannot be part of multiple teams.
+          </p>
+          <p class="section-lead tight">
+            3.After submission, you will receive an email with detailed instructions for the development set and submission details.
+          </p>
+          <p class="section-lead tight">
+            4.The test set will be released when the leaderboard is open for submission.
+          </p>
+
+          <h2 class="subsection-title subsection-title-em">Benchmark and Evaluation Metrics</h2>
+          <p class="section-lead tight">
+            This shared task evaluates LLMs using three value-based datasets, each split into 20% development and 80% test sets:
+          </p>
+          <ul class="task-infra">
+            <li><strong>Chinese (4,000 instances)</strong>: Multiple-choice daily scenarios testing 158 universal values against a single gold answer.</li>
+            <li><strong>Indonesian (1,834 instances)</strong>: Multiple-choice news-based scenarios testing five national values based on Pancasila, scored against human consensus.</li>
+            <li><strong>Sri Lankan (1,000 instances in Sinhala)</strong>: Evaluates two statements (labeled A, B, Both, or None) grounded in 40 survey-derived societal values.</li>
+          </ul>
+
+          <p class="section-lead tight">Submission format, delivery, and scoring details:</p>
+          <p class="section-lead tight">Each team must submit one prediction jsonl file covering all hidden test instances across all three countries. The format of the output:</p>
+          <pre><code>{
+  &ldquo;dataset&rdquo;: &ldquo;&lt;dataset_name&gt;&rdquo;
+  &ldquo;id&rdquo;: &ldquo;&lt;question_id&gt;&rdquo;,
+  &ldquo;LLM_Output&rdquo;: &ldquo;&lt;exact_answer&gt;&rdquo;
+}</code></pre>
+          <p class="section-lead tight">The required LLM_Output would be:</p>
+          <ul class="task-infra">
+            <li><strong>China</strong>: one label from {A, B, C, D} for each four-option multiple-choice item.</li>
+            <li><strong>Indonesia</strong>: one label from {A, B, C, D} for each four-option multiple-choice item.</li>
+            <li><strong>Sri Lanka</strong>: one label from {A, B, Both, 0} for each item.</li>
+          </ul>
+          <p class="section-lead tight">The prediction json file can be submitted via leaderboard website: <a href="https://www.codabench.org/competitions/16791/" rel="noopener noreferrer">Track-1 Resource-Constrained Track</a> <a href="https://www.codabench.org/competitions/16818/" rel="noopener noreferrer">Track-2 Open Track</a>. The file must be saved as &ldquo;predictions.jsonl&rdquo; and zipped. Submissions that do not follow the required output format may be treated as invalid for the affected instances.</p>
+
+          <h2 class="subsection-title subsection-title-em">Leaderboard</h2>
+
+          <h3 class="subsection-title">Track 1: Resource-Constrained Track</h3>
+          <p class="section-lead tight">Live leaderboard: <a href="https://www.codabench.org/competitions/16791/" rel="noopener noreferrer">https://www.codabench.org/competitions/16791/</a></p>
+          <div class="table-wrap"><table class="task-matrix-table">
+            <thead>
+              <tr>
+                <th>Team Name</th>
+                <th>Affiliation</th>
+                <th>Chinese</th>
+                <th>Indonesian</th>
+                <th>Sri Lankan</th>
+                <th>Macro-Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Baseline (gemma-3-4b-it)</td>
+                <td></td>
+                <td>0.460</td>
+                <td>0.621</td>
+                <td>0.718</td>
+                <td>0.600</td>
+              </tr>
+            </tbody>
+          </table></div>
+
+          <h3 class="subsection-title">Track 2: Open Track</h3>
+          <p class="section-lead tight">Live Leaderboard: <a href="https://www.codabench.org/competitions/16818/" rel="noopener noreferrer">https://www.codabench.org/competitions/16818/</a></p>
+          <div class="table-wrap"><table class="task-matrix-table">
+            <thead>
+              <tr>
+                <th>Teams</th>
+                <th>Affiliation</th>
+                <th>Chinese</th>
+                <th>Indonesian</th>
+                <th>Sri Lankan</th>
+                <th>Macro-Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Baseline (claude-sonnet-4.6)</td>
+                <td></td>
+                <td>0.683</td>
+                <td>0.696</td>
+                <td>0.961</td>
+                <td>0.780</td>
+              </tr>
+            </tbody>
+          </table></div>
+
+          <div class="inline-actions">
+            <a class="btn btn-primary" href="shared-task.html">Shared Task overview</a>
+            <a class="btn btn-secondary" href="mailto:plurvallm2026@outlook.com">Task contact</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <p><strong>PlurVA-LLM</strong></p>
+          <p>Pluralistic Value Alignment of LLMs · AACL 2026 · Hengqin, China</p>
+        </div>
+        <div>
+          <p><strong>Workshop</strong></p>
+          <ul>
+            <li><a href="cfp.html">CFP</a></li>
+            <li><a href="shared-task.html">Shared Task</a></li>
+            <li><a href="sponsorship.html">Sponsorship</a></li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>People</strong></p>
+          <ul>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="organizers.html">Organizers</a></li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>Contact</strong></p>
+          <ul>
+            <li><a href="mailto:plurvallm2026@outlook.com">plurvallm2026@outlook.com</a></li>
+            <li><a href="https://x.com/PluralValAI2026" rel="noopener noreferrer">@PluralValAI2026</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <p>&copy; 2026 Workshop organizers. AACL-IJCNLP 2026 policies prevail if anything differs.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
