@@ -1135,6 +1135,15 @@ h1 {
   background: var(--bg-alt);
 }
 
+.ddl-group + .ddl-group {
+  margin-top: 2.5rem;
+}
+
+.ddl-group .subsection-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 .ddl-list {
   display: flex;
   flex-direction: column;
