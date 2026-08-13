@@ -550,35 +550,33 @@ h1 {
 .speaker-profiles {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 2rem;
 }
 
 .speaker-profile {
   display: grid;
-  grid-template-columns: 11rem 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 12.5rem 1fr;
+  gap: 1.75rem;
   align-items: start;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.35rem;
+  padding: 1.5rem;
   box-shadow: var(--shadow);
 }
 
 .speaker-profile__photo {
-  width: 11rem;
-  aspect-ratio: 1;
+  width: 12.5rem;
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: var(--bg-alt);
   flex-shrink: 0;
+  line-height: 0;
 }
 
 .speaker-profile__photo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
   display: block;
 }
 
@@ -610,7 +608,7 @@ h1 {
   }
 
   .speaker-profile__photo {
-    width: 10rem;
+    width: min(14rem, 70vw);
   }
 
   .speaker-profile__bio {
