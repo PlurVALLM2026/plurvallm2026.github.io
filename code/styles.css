@@ -587,20 +587,51 @@ h1 {
 }
 
 .speaker-profile__role {
-  margin: 0 0 0.85rem;
+  margin: 0 0 1rem;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--accent-soft);
 }
 
+.speaker-profile__role:has(+ .speaker-profile__homepage) {
+  margin-bottom: 0.25rem;
+}
+
+.speaker-profile__homepage {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+}
+
+.speaker-profile__homepage a {
+  color: var(--accent);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.speaker-profile__homepage a:hover {
+  text-decoration: underline;
+}
+
 .speaker-profile__talk {
-  margin: 0 0 0.85rem;
+  margin: 0 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.speaker-profile__kicker {
+  margin: 0 0 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
 }
 
 .speaker-profile__talk-title {
-  margin: 0 0 0.4rem;
-  font-size: 1rem;
+  margin: 0 0 0.9rem;
+  font-size: 1.05rem;
   font-weight: 700;
+  line-height: 1.45;
   color: var(--ink);
   font-family: var(--font-sans);
 }
@@ -609,14 +640,24 @@ h1 {
   margin: 0;
   color: var(--ink-muted);
   font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.7;
+}
+
+.speaker-profile__talk-abstract p,
+.speaker-profile__bio p {
+  margin: 0 0 0.75rem;
+}
+
+.speaker-profile__talk-abstract p:last-child,
+.speaker-profile__bio p:last-child {
+  margin-bottom: 0;
 }
 
 .speaker-profile__bio {
   margin: 0;
   color: var(--ink-muted);
   font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 @media (max-width: 700px) {
@@ -630,8 +671,12 @@ h1 {
     width: min(14rem, 70vw);
   }
 
+  .speaker-profile__role,
+  .speaker-profile__homepage,
+  .speaker-profile__talk,
   .speaker-profile__bio {
     text-align: left;
+    width: 100%;
   }
 }
 
