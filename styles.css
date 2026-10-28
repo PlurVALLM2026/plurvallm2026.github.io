@@ -1418,16 +1418,17 @@ h1 {
 }
 
 .program-schedule {
-  max-width: 48rem;
+  width: 100%;
+  max-width: none;
   margin: 0;
 }
 
 .program-row {
   display: grid;
-  grid-template-columns: 8.75rem 1fr;
-  gap: 1.25rem;
+  grid-template-columns: 8.75rem minmax(0, 1fr);
+  gap: 1.5rem 2rem;
   align-items: start;
-  margin-bottom: 1.15rem;
+  margin-bottom: 1rem;
 }
 
 .program-time {
@@ -1437,7 +1438,7 @@ h1 {
   font-weight: 400;
   color: var(--ink);
   white-space: nowrap;
-  line-height: 1.55;
+  line-height: 1.65;
 }
 
 .program-detail {
@@ -1451,21 +1452,23 @@ h1 {
   font-style: italic;
   font-weight: 400;
   color: var(--ink);
-  line-height: 1.55;
+  line-height: 1.65;
+  overflow-wrap: break-word;
 }
 
 .program-papers {
-  margin: 0.55rem 0 0;
+  margin: 0.45rem 0 0;
   padding-left: 1.35rem;
   font-family: var(--font-serif);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-style: italic;
   color: var(--ink);
-  line-height: 1.55;
+  line-height: 1.65;
 }
 
 .program-papers li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
+  overflow-wrap: break-word;
 }
 
 .program-papers li:last-child {
