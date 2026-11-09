@@ -529,7 +529,8 @@ h1 {
 }
 
 .news-table tbody tr td {
-  height: 2.6rem;
+  height: auto;
+  vertical-align: top;
 }
 
 .news-table tbody tr:hover td {
@@ -1410,11 +1411,144 @@ h1 {
 }
 
 .program-date {
-  margin: 0 0 1.75rem;
+  margin: 0 0 0.45rem;
   font-family: var(--font-serif);
   font-size: 1.15rem;
   font-weight: 600;
   color: var(--ink);
+}
+
+.program-venue,
+.program-note {
+  margin: 0 0 0.65rem;
+  color: var(--ink-muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  max-width: 52rem;
+}
+
+.program-note {
+  margin-bottom: 1.75rem;
+}
+
+.program-mode {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--accent-soft);
+  font-weight: 600;
+}
+
+.program-award {
+  margin: 0.85rem 0 0;
+  padding: 0.65rem 0.85rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-wash);
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.program-papers--timed,
+.program-papers--poster {
+  list-style: none;
+  padding-left: 0;
+}
+
+.program-papers--timed li,
+.program-papers--poster li {
+  display: grid;
+  gap: 0.15rem 1rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.program-papers--timed li:last-child,
+.program-papers--poster li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.program-papers--timed li {
+  grid-template-columns: 6.5rem 1fr;
+  align-items: start;
+}
+
+.program-papers--timed .program-paper-title,
+.program-papers--timed .program-paper-meta {
+  grid-column: 2;
+}
+
+.program-papers--poster .program-paper-title,
+.program-papers--poster .program-paper-meta {
+  grid-column: 1;
+}
+
+.program-slot-time {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--accent-soft);
+  white-space: nowrap;
+  padding-top: 0.15rem;
+}
+
+.program-paper-title {
+  font-style: italic;
+  color: var(--ink);
+}
+
+.program-paper-meta {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.program-presenter {
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.program-badge {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.08rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  background: var(--surface);
+}
+
+.news-photo {
+  display: block;
+  width: 100%;
+  max-width: 36rem;
+  height: auto;
+  margin: 0.75rem 0 0.35rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.news-table tbody tr td {
+  height: auto;
+  vertical-align: top;
+}
+
+@media (max-width: 700px) {
+  .program-papers--timed li {
+    grid-template-columns: 1fr;
+  }
+
+  .program-papers--timed .program-paper-title,
+  .program-papers--timed .program-paper-meta {
+    grid-column: 1;
+  }
 }
 
 .program-schedule {
